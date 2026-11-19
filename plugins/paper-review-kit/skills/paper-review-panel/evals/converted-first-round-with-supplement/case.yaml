@@ -1,0 +1,19 @@
+# Prompt only so far. Before running: add files/ with earlier/ (three free-text reviews,
+# the authors' point-by-point answers, the old 1-10 score sheet), paper-v1.pdf,
+# paper-v2.pdf and supplement-v2.pdf, plus place-files.sh and a context block.
+schema_version: "1.1"
+name: converted-first-round-with-supplement
+expected_outcome: |
+  The run keeps the hand-run reviews unchanged in earlier/ and converts them: points from
+  the authors' answer rows, ids rewritten through an id map, severities from the
+  reviewers' own levels, quotes cut from the text layer only where a passage exists (a
+  chosen passage marked quote_chosen, none typed), every converted review marked
+  converted, no counter-evidence search or reading record invented, the old score sheet
+  declared as extra_score_sheet and copied into extra_scores. It extracts paper-v2 and the
+  supplement together (page map), checks the response's quotes, and builds the rooms with
+  the fresh rooms under their own neutral parent (--fresh-out, apart from the returning
+  rooms) and the PDFs there named manuscript.pdf and supplement.pdf, not paper-v2.pdf;
+  every room holds the text layer, fresh briefs carry no hint of a
+  revision, returning briefs ask for remaining_severity on partly and for the extra sheet
+  again. The report marks round 1 as converted and shows the extra score sheet with its
+  movement, separately from the anchored scores.

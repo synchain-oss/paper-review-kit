@@ -1,0 +1,17 @@
+{
+  "name": "paper-review-kit",
+  "owner": {
+    "name": "paper-review-kit maintainers"
+  },
+  "metadata": {
+    "description": "Claude Code plugin: a simulated peer-review panel that helps authors improve a research paper over one or more rounds"
+  },
+  "plugins": [
+    {
+      "name": "paper-review-kit",
+      "source": "./plugins/paper-review-kit",
+      "version": "0.2.0",
+      "description": "The paper-review-panel skill: independent model reviewers, script-checked quotes, change list first, returning and fresh reviewers, an issue ledger and a stopping rule"
+    }
+  ]
+}

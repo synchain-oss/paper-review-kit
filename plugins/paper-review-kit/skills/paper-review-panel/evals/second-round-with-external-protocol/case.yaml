@@ -1,0 +1,22 @@
+# Prompt only so far. Before running: add files/ with a review/ folder from a finished
+# round 1, manuscript-v2.pdf and response.json, plus place-files.sh and a context block.
+schema_version: "1.1"
+name: second-round-with-external-protocol
+expected_outcome: |
+  The run copies the revised PDF and the response into review/round-2/, extracts the text
+  and checks the response's quotes against the revised PDF before any reviewer starts,
+  fixing or flagging rows that claim text the PDF lacks. ledger.py rooms decides who
+  returns and builds one room per reviewer. Returning reviewers get only their room (their
+  own earlier review, their two packets, the two PDFs and the revised text layer) and a
+  brief with the three steps (criteria before the response, judgement with quotes of the
+  revised text and a remaining severity for each partly, then the response with every
+  claimed change checked). Fresh reviewers get new ids and a room with only the revised PDF
+  and its text layer (as manuscript.pdf, under a parent apart from the returning rooms),
+  and nothing in their brief, paths or file names hints at a revision. The external protocol is saved as
+  plain text with a SOURCE.txt, never installed and its scripts never run; the files the
+  seat should read go into its room's protocol/ folder, and its brief starts with the
+  override rules plus items for anything protocol-specific (a gate, its own reviewers, a
+  request outside reviewing). Models are set explicitly on every launch. The
+  report includes what the round changed, the fresh-versus-returning comparison, a fix
+  plan (done, needs the author's decision, not recommended with reasons) and a seat
+  comparison, with the caution that one run per method is an anecdote.

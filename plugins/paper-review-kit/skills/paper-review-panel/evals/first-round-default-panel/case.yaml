@@ -1,0 +1,15 @@
+# Prompt only so far. Before running: put a short manuscript PDF at files/manuscript.pdf,
+# add place-files.sh, a context block naming it, and an "Input files:" line in prompt.md.
+schema_version: "1.1"
+name: first-round-default-panel
+expected_outcome: |
+  The run asks once which model the reviewers should run on (or states which one it uses
+  because the user already said so), writes plan.json with a stopping rule before any
+  review, and creates a review folder outside any repository. It launches three
+  reviewers (subfield expert, methods and statistics, general reader) in separate fresh
+  contexts with the model set explicitly, each reading only its own room (the PDF and its
+  text layer), with no quota of weaknesses. Reviews are saved unedited as JSON; check_quotes.py, ledger.py build and
+  render_report.py are run. The answer to the user leads with a short list of changes
+  worth making (must-fix first, each with place and resolution), then says how the
+  reviewers were run and gives the report paths; scores are presented as movement
+  markers, not as an acceptance prediction.

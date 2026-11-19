@@ -1,0 +1,9 @@
+{
+  "name": "paper-review-kit",
+  "version": "0.2.0",
+  "description": "Simulated peer review that exists to improve the paper: independent reviewers with different methods, quotes checked by script, a short change list, the authors' response, returning and fresh reviewers in later rounds, an issue ledger with stable ids and a stopping rule.",
+  "author": {
+    "name": "paper-review-kit maintainers"
+  },
+  "keywords": ["peer-review", "paper", "manuscript", "review-panel", "revision", "response-letter"]
+}

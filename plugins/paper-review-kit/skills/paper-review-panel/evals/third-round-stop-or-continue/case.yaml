@@ -1,0 +1,14 @@
+# Prompt only so far. Before running: add files/ with a review/ folder holding two finished
+# rounds, manuscript-v3.pdf and response-v3.json, plus place-files.sh and a context block.
+schema_version: "1.1"
+name: third-round-stop-or-continue
+expected_outcome: |
+  The run rebuilds the ledger and answers the question with the stopping rule written in
+  plan.json before round 1, naming which conditions hold (open must-fix points, whether
+  round 2's fresh reviewers raised anything new that survived checking, the round limit),
+  without changing the rule. If it continues, round-3 gets the new PDF and the response;
+  returning reviewers are every earlier reviewer with an open point, including round-2
+  fresh reviewers, each with all of its own earlier reviews; new fresh reviewers get new
+  ids; ids of existing points do not change. The report is rendered with --lang zh, states
+  plainly what round 3 changed in the paper next to the ledger's counts, and the answer to
+  the user is in Chinese and leads with the remaining changes worth making.
