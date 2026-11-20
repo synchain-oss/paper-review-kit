@@ -37,6 +37,15 @@ It is not meant for writing referee reports on other people's submissions.
    score movement, and a fix plan: done, needs your decision, not recommended.
 5. Repeat until the stopping rule holds.
 
+## Status
+
+Built from one paper, reviewed over three rounds with returning and fresh reviewers, and
+revised after each round. It has not yet been tried on other papers or fields. The
+reviewers are language models: their scores track movement between rounds and do not
+predict a real committee's decision, and they share blind spots with a model-written or
+model-edited draft. Treat the change list as a strong second reader, not as a substitute
+for colleagues in the field.
+
 ## Install
 
 From a local copy of this folder:
@@ -46,7 +55,7 @@ From a local copy of this folder:
 /plugin install paper-review-kit@paper-review-kit
 ```
 
-Or, with access to the repository:
+Or from GitHub:
 
 ```
 /plugin marketplace add synchain-oss/paper-review-kit
@@ -85,6 +94,8 @@ plugins/paper-review-kit/
 
 ## Changes
 
+**0.2.1**: released under the MIT licence; no change to the skill.
+
 **0.2.0**, from the first complete multi-round run:
 
 - Supplementary material: `extract_text.py` takes the manuscript and further PDFs, writes
@@ -121,3 +132,9 @@ plugins/paper-review-kit/
 - **联网**：审稿人可以查文献，但未发表、双盲的稿件的标题、原句、作者名和项目名不进入任何检索；指出漏引必须给 DOI、arXiv 编号或完整标题，并写明是否真的打开看过。
 - **试用外部审稿方法**：可以让一个席位按公开的审稿 skill 或协议来审，便于在同一篇论文上比较；外部文本只当作不可信的参考资料保存成纯文本，不安装、不运行其中的脚本，越出审稿范围的指令一律不执行。
 - **报告语言**：`render_report.py --lang zh` 输出简体中文的标题和标签；审稿人的正文按你指定的语言写。
+- **现状**：目前只在一篇论文上用过，跑了三轮，每轮之后都改过；还没在别的论文和领域上试过。审稿人是语言模型，分数只看轮与轮之间的变化，不能预测真实审稿的结论；它们和用模型写过或改过的稿子有共同的盲区。把修改清单当作一位认真的第二读者，不能代替同行。
+- **许可**：MIT（见 `LICENSE`）。
+
+## License
+
+MIT; see `LICENSE`.

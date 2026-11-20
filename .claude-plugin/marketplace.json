@@ -10,7 +10,7 @@
     {
       "name": "paper-review-kit",
       "source": "./plugins/paper-review-kit",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "The paper-review-panel skill: independent model reviewers, script-checked quotes, change list first, returning and fresh reviewers, an issue ledger and a stopping rule"
     }
   ]
